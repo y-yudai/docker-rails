@@ -17,9 +17,9 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
   apt-get install -y nodejs
 
+# Cache bundle
 WORKDIR /tmp
-ADD Gemfile Gemfile
-ADD Gemfile.lock Gemfile.lock
+COPY Gemfile* /tmp/
 RUN bundle install
 
 RUN mkdir -p ${APP_HOME}
