@@ -13,7 +13,7 @@ Rails + MySQL + Vue.js in Docker container.
 
 ```
 $ mkdir myapp
-$ cp -r docker-rails/* myapp/*
+$ cp -r docker-rails/* myapp/
 $ cd myapp/
 ```
 
